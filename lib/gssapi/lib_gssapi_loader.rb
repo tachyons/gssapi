@@ -48,8 +48,8 @@ module GSSAPI
         gssapi_lib = 'libgssapi.so.3'
       when /darwin/
         # Check for M1/ARM Mac with Homebrew
-        if File.exist?('/opt/homebrew/lib/heimdal/libgssapi.dylib')
-          gssapi_lib = '/opt/homebrew/lib/heimdal/libgssapi.dylib'
+        if File.exist?('/opt/homebrew/opt/heimdal/lib/libgssapi.dylib')
+          gssapi_lib = '/opt/homebrew/opt/heimdal/lib/libgssapi.dylib'
         else
           # use Heimdal Kerberos since Mac MIT Kerberos is OLD. Do a "require 'gssapi/heimdal'" first
           gssapi_lib = '/usr/heimdal/lib/libgssapi.dylib'
